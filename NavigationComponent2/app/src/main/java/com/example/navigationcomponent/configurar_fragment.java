@@ -40,6 +40,7 @@ public class configurar_fragment extends Fragment
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private String tag;
 
     public configurar_fragment() {
         // Required empty public constructor
@@ -68,6 +69,7 @@ public class configurar_fragment extends Fragment
         ArrayList<Prediction> predictions= gLibrary.recognize(gesture);
         if (predictions.size() > 0 && predictions.get(0).score > 1){
             String action = predictions.get(0).name;
+            
             Log.i(tag:"Gesture",action);
 
 
